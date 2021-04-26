@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    tools {
+        terraform 'terraform_kv'
+    }
+    stages{
+        stage('GIT CHECKOUT'){
+         steps{
+             git branch: 'main', credentialsId: 'c52adb75-28de-44b5-b64c-705221a65782', url: 'https://github.com/vkrishnait/jenkins'
+         }
+        } 
+        stage('terraform init'){
+         steps{
+             sh 'terraform init'
+         } 
+        }
+        stage('terraform plan'){
+         steps{
+             sh 'terraform plan'
+         } 
+        }
+        stage('terraform apply'){
+         steps{
+             sh 'terraform apply --auto-approve'
+         } 
+        }
+    }
+}
