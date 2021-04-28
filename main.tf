@@ -14,5 +14,5 @@ resource "aws_instance" "krishna1" {
      tags = {
        "Name" = "VM8"
      }
-  user_data = file("postscript.sh")
+  user_data = file("userdata.sh")
 }
