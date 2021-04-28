@@ -7,7 +7,7 @@ resource "aws_instance" "krishna" {
      instance_type = "t2.micro"
      key_name = var.ssh_key
      tags = {
-       "Name" = "VM3"
+       "Name" = "VM4"
      }
 
 }
