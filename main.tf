@@ -2,7 +2,9 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-
+resource "aws_security_group" "JenkinSG" {
+  name = "Jenkin SG1"
+  }
   ## ubuntu image#####
   ## my ssh_key AWS_KV ########
 
