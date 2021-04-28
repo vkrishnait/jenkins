@@ -11,7 +11,6 @@ resource "aws_instance" "krishna1" {
     ami = ami-0d758c1134823146a
      instance_type = t2.micro
      key_name = var.ssh_key
-     vpc_security_group_ids =  sg-01352ca308830b5fa
      tags = {
        "Name" = "VM8"
      }
